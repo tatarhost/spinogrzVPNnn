@@ -8,102 +8,98 @@
         :root {
             --bg: #050505;
             --accent: #ff3e3e;
-            --glass: rgba(255, 255, 255, 0.05);
+            --glass: rgba(255, 255, 255, 0.04);
             --white: #ffffff;
             --grey: #a1a1aa;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
         body { background: var(--bg); color: var(--white); min-height: 100vh; display: flex; justify-content: center; padding: 20px; }
-        
         .main-container { width: 100%; max-width: 480px; }
 
-        /* Блок над заголовком */
-        .top-features { 
-            display: flex; gap: 10px; justify-content: center; margin-bottom: 20px; 
-            flex-wrap: wrap;
-        }
-        .badge { 
-            background: rgba(255, 62, 62, 0.15); color: var(--accent); 
-            padding: 5px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600;
-            border: 1px solid rgba(255, 62, 62, 0.3);
-        }
+        .top-features { display: flex; gap: 8px; justify-content: center; margin-bottom: 25px; flex-wrap: wrap; }
+        .badge { background: rgba(255, 62, 62, 0.1); color: var(--accent); padding: 6px 14px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; border: 1px solid rgba(255, 62, 62, 0.2); }
 
-        /* Заголовок */
         .header-section { text-align: center; margin-bottom: 40px; }
-        .title { font-size: 3rem; font-weight: 900; letter-spacing: -2px; margin-bottom: 5px; }
+        .title { font-size: 3.5rem; font-weight: 900; letter-spacing: -3px; margin-bottom: 5px; line-height: 1; }
         .title span { color: var(--accent); }
-        .subtitle { color: var(--grey); font-size: 1.1rem; }
+        .subtitle { color: var(--grey); font-size: 1rem; margin-top: 10px; }
 
-        /* Главная карточка */
         .card-download {
             background: linear-gradient(180deg, #18181b 0%, #09090b 100%);
-            padding: 30px; border-radius: 30px; border: 1px solid #27272a;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.5); text-align: center;
+            padding: 30px; border-radius: 35px; border: 1px solid #27272a;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.6); text-align: center;
         }
 
-        .download-btn {
-            display: block; width: 100%; padding: 20px;
-            background: var(--accent); color: white; border-radius: 18px;
-            text-decoration: none; font-weight: 800; font-size: 1.2rem;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .download-btn:hover { transform: scale(1.03); box-shadow: 0 0 30px var(--accent); }
+        .btn-group { display: flex; flex-direction: column; gap: 12px; margin-top: 25px; }
 
-        /* Секция деталей */
+        .btn {
+            display: block; width: 100%; padding: 18px; border-radius: 18px;
+            text-decoration: none; font-weight: 800; font-size: 1rem;
+            transition: all 0.3s ease; text-align: center;
+        }
+        .btn-main { background: var(--accent); color: white; }
+        .btn-main:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(255,62,62,0.3); }
+
+        .btn-secondary { 
+            background: transparent; color: var(--grey); border: 2px solid #27272a;
+            cursor: not-allowed; opacity: 0.6;
+        }
+
         .details-grid { margin-top: 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
-        .detail-item { 
-            background: var(--glass); padding: 20px; border-radius: 20px; 
-            border: 1px solid rgba(255,255,255,0.05);
-        }
-        .detail-item h4 { color: var(--accent); margin-bottom: 5px; }
-        .detail-item p { font-size: 0.8rem; color: var(--grey); }
+        .detail-item { background: var(--glass); padding: 20px; border-radius: 22px; border: 1px solid rgba(255,255,255,0.03); }
+        .detail-item h4 { color: var(--white); font-size: 0.9rem; margin-bottom: 8px; }
+        .detail-item p { font-size: 0.75rem; color: var(--grey); line-height: 1.4; }
 
-        /* Анимация */
         @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .animate { animation: fadeIn 0.8s ease-out; }
+        .animate { animation: fadeIn 0.8s ease-out forwards; }
     </style>
 </head>
 <body>
 
     <div class="main-container">
         
-        <!-- Преимущества над заголовком -->
         <div class="top-features animate">
-            <span class="badge">БЕЗ ЛОГОВ</span>
-            <span class="badge">БЕЗЛИМИТ</span>
-            <span class="badge">ВЫСОКАЯ СКОРОСТЬ</span>
+            <span class="badge">No-Logs Policy</span>
+            <span class="badge">Ultra Fast</span>
+            <span class="badge">Unrestricted</span>
         </div>
 
         <div class="header-section animate">
             <h1 class="title">SPINO<span>GRZ</span></h1>
-            <p class="subtitle">VPN для полной свободы в сети</p>
+            <p class="subtitle">Ultimate VPN для полной свободы</p>
         </div>
 
         <div class="card-download animate">
-            <h3 style="margin-bottom: 20px;">Версия 1.0.0 (APK)</h3>
-            <a href="https://github.com/tatarhost/spinogrzVPNnn/raw/refs/heads/main/base.apk" class="download-btn">
-                Скачать
-            </a>
-            <p style="margin-top: 15px; font-size: 0.75rem; color: #555;">Вес: ~12 MB • Android 6.0+</p>
+            <h3 style="margin-bottom: 5px;">Приложение Spinogrz</h3>
+            <p style="font-size: 0.8rem; color: #666; margin-bottom: 25px;">Выберите вашу платформу</p>
+            
+            <div class="btn-group">
+                <a href="https://github.com/tatarhost/spinogrzVPNnn/raw/refs/heads/main/base.apk" class="btn btn-main">
+                    Скачать Android (APK)
+                </a>
+                <a href="#" class="btn btn-secondary">
+                    Скоро Windows (.exe)
+                </a>
+            </div>
         </div>
 
         <div class="details-grid animate">
             <div class="detail-item">
                 <h4>Анонимность</h4>
-                <p>Мы не отслеживаем ваш трафик и историю посещений.</p>
+                <p>Ваши данные остаются только с вами.</p>
             </div>
             <div class="detail-item">
                 <h4>Локации</h4>
-                <p>Серверы в Германии, Нидерландах, Швеции и др.</p>
+                <p>Оптимальные серверы по всей планете.</p>
             </div>
             <div class="detail-item">
                 <h4>Защита</h4>
-                <p>Шифрование данных по военным стандартам.</p>
+                <p>Шифрование военного уровня.</p>
             </div>
             <div class="detail-item">
-                <h4>Простота</h4>
-                <p>Подключение в один клик без сложных настроек.</p>
+                <h4>Стабильность</h4>
+                <p>Никаких разрывов соединения.</p>
             </div>
         </div>
 
