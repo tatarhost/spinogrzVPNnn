@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>spinogrzVPN — Скачать</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .logo {
+            width: 90px;
+            height: 90px;
+            background: #e11d48;
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            box-shadow: 0 0 40px rgba(225, 29, 72, 0.3);
+        }
+
+        .logo svg {
+            width: 44px;
+            height: 44px;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        h1 {
+            font-size: 2.6rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+            letter-spacing: -1px;
+        }
+
+        .tagline {
+            color: #666;
+            font-size: 1rem;
+            margin-bottom: 45px;
+        }
+
+        .card {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            background: #141414;
+            border: 1px solid #1f1f1f;
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 14px;
+            text-decoration: none;
+            color: #fff;
+            transition: all 0.25s ease;
+        }
+
+        .card:hover {
+            border-color: #e11d48;
+            background: #1a1a1a;
+            transform: translateY(-2px);
+        }
+
+        .icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        .icon.pc {
+            background: #e11d48;
+        }
+
+        .icon.android {
+            background: #be123c;
+        }
+
+        .icon svg {
+            width: 26px;
+            height: 26px;
+            fill: none;
+            stroke: #fff;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .info {
+            text-align: left;
+            flex: 1;
+        }
+
+        .name {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+
+        .desc {
+            color: #666;
+            font-size: 0.85rem;
+        }
+
+        .arrow {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            background: #1f1f1f;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.25s ease;
+        }
+
+        .arrow svg {
+            width: 18px;
+            height: 18px;
+            fill: none;
+            stroke: #666;
+            stroke-width: 2;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .card:hover .arrow {
+            background: #e11d48;
+        }
+
+        .card:hover .arrow svg {
+            stroke: #fff;
+        }
+
+        .badge {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 8px 18px;
+            background: #141414;
+            border: 1px solid #1f1f1f;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+
+        .footer {
+            margin-top: 35px;
+            color: #333;
+            font-size: 0.8rem;
+        }
+
+        @media (max-width: 400px) {
+            h1 { font-size: 2rem; }
+            .card { padding: 20px; }
+        }
+    </style>
+<base target="_blank">
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <svg viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                <path d="m9 12 2 2 4-4"/>
+            </svg>
+        </div>
+
+        <h1>spinogrzVPN</h1>
+        <p class="tagline">Быстрый и безопасный VPN</p>
+
+        <a href="https://drive.usercontent.google.com/download?id=1_d27bXLaMPhkgOseC1IddBHMqqg5UN9c&export=download&authuser=0" class="card">
+            <div class="icon pc">
+                <svg viewBox="0 0 24 24">
+                    <rect x="2" y="3" width="20" height="14" rx="2"/>
+                    <line x1="8" y1="21" x2="16" y2="21"/>
+                    <line x1="12" y1="17" x2="12" y2="21"/>
+                </svg>
+            </div>
+            <div class="info">
+                <div class="name">Windows</div>
+                <div class="desc">Скачать для ПК</div>
+            </div>
+            <div class="arrow">
+                <svg viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                </svg>
+            </div>
+        </a>
+
+        <a href="https://drive.usercontent.google.com/download?id=1HBltrrDMdrp0I9Z9G4QIw2JPXZQWYezM&export=download&authuser=0" class="card">
+            <div class="icon android">
+                <svg viewBox="0 0 24 24">
+                    <rect x="5" y="2" width="14" height="20" rx="2"/>
+                    <line x1="12" y1="18" x2="12" y2="18"/>
+                </svg>
+            </div>
+            <div class="info">
+                <div class="name">Android</div>
+                <div class="desc">Скачать APK</div>
+            </div>
+            <div class="arrow">
+                <svg viewBox="0 0 24 24">
+                    <line x1="5" y1="12" x2="19" y2="12"/>
+                    <polyline points="12 5 19 12 12 19"/>
+                </svg>
+            </div>
+        </a>
+
+        <div class="badge">v1.0 • Без рекламы • Без логов</div>
+
+        <div class="footer">© 2026 spinogrzVPN</div>
+    </div>
+</body>
+</html>
