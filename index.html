@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>spinogrzVPN — Скачать</title>
+    <title>spinogrzVPN</title>
     <style>
         * {
             margin: 0;
@@ -12,81 +12,83 @@
         }
 
         body {
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            background: #0a0a0a;
+            font-family: system-ui, -apple-system, sans-serif;
+            background: #080808;
             color: #fff;
             min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            padding: 20px;
+            padding: 24px;
         }
 
-        .container {
-            max-width: 480px;
+        .wrap {
+            max-width: 420px;
             width: 100%;
             text-align: center;
         }
 
         .logo {
-            width: 90px;
-            height: 90px;
-            background: #e11d48;
-            border-radius: 24px;
+            width: 80px;
+            height: 80px;
+            background: #dc2626;
+            border-radius: 20px;
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 25px;
-            box-shadow: 0 0 40px rgba(225, 29, 72, 0.3);
+            margin: 0 auto 28px;
+            box-shadow: 0 0 30px rgba(220, 38, 38, 0.25);
         }
 
         .logo svg {
-            width: 44px;
-            height: 44px;
-            fill: none;
+            width: 40px;
+            height: 40px;
             stroke: #fff;
             stroke-width: 2;
+            fill: none;
             stroke-linecap: round;
             stroke-linejoin: round;
         }
 
         h1 {
-            font-size: 2.6rem;
+            font-size: 2.4rem;
             font-weight: 800;
-            margin-bottom: 8px;
-            letter-spacing: -1px;
+            margin-bottom: 6px;
         }
 
         .tagline {
-            color: #666;
-            font-size: 1rem;
-            margin-bottom: 45px;
+            color: #525252;
+            font-size: 0.95rem;
+            margin-bottom: 40px;
         }
 
         .card {
             display: flex;
             align-items: center;
-            gap: 18px;
-            background: #141414;
-            border: 1px solid #1f1f1f;
-            border-radius: 16px;
-            padding: 24px;
-            margin-bottom: 14px;
+            gap: 16px;
+            background: #111;
+            border: 1px solid #1c1c1c;
+            border-radius: 14px;
+            padding: 20px 22px;
+            margin-bottom: 12px;
             text-decoration: none;
             color: #fff;
-            transition: all 0.25s ease;
+            transition: all 0.2s ease;
         }
 
         .card:hover {
-            border-color: #e11d48;
-            background: #1a1a1a;
-            transform: translateY(-2px);
+            border-color: #dc2626;
+            background: #161616;
+        }
+
+        .card:active {
+            transform: scale(0.98);
         }
 
         .icon {
-            width: 52px;
-            height: 52px;
-            border-radius: 14px;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -94,19 +96,19 @@
         }
 
         .icon.pc {
-            background: #e11d48;
+            background: #dc2626;
         }
 
         .icon.android {
-            background: #be123c;
+            background: #991b1b;
         }
 
         .icon svg {
-            width: 26px;
-            height: 26px;
-            fill: none;
+            width: 24px;
+            height: 24px;
             stroke: #fff;
             stroke-width: 2;
+            fill: none;
             stroke-linecap: round;
             stroke-linejoin: round;
         }
@@ -117,70 +119,69 @@
         }
 
         .name {
-            font-size: 1.15rem;
+            font-size: 1.1rem;
             font-weight: 700;
-            margin-bottom: 3px;
         }
 
         .desc {
-            color: #666;
-            font-size: 0.85rem;
+            color: #525252;
+            font-size: 0.8rem;
+            margin-top: 2px;
         }
 
         .arrow {
-            width: 36px;
-            height: 36px;
-            border-radius: 10px;
-            background: #1f1f1f;
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: #1c1c1c;
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: all 0.25s ease;
         }
 
         .arrow svg {
-            width: 18px;
-            height: 18px;
-            fill: none;
-            stroke: #666;
+            width: 16px;
+            height: 16px;
+            stroke: #525252;
             stroke-width: 2;
+            fill: none;
             stroke-linecap: round;
             stroke-linejoin: round;
         }
 
         .card:hover .arrow {
-            background: #e11d48;
+            background: #dc2626;
         }
 
         .card:hover .arrow svg {
             stroke: #fff;
         }
 
-        .badge {
-            display: inline-block;
-            margin-top: 30px;
-            padding: 8px 18px;
-            background: #141414;
-            border: 1px solid #1f1f1f;
+        .meta {
+            margin-top: 28px;
+            padding: 6px 14px;
+            background: #111;
+            border: 1px solid #1c1c1c;
             border-radius: 50px;
-            font-size: 0.8rem;
-            color: #666;
+            font-size: 0.75rem;
+            color: #404040;
+            display: inline-block;
         }
 
         .footer {
-            margin-top: 35px;
-            color: #333;
-            font-size: 0.8rem;
+            margin-top: 32px;
+            color: #262626;
+            font-size: 0.75rem;
         }
 
-        @media (max-width: 400px) {
+        @media (max-width: 380px) {
             h1 { font-size: 2rem; }
-            .card { padding: 20px; }
+            .card { padding: 18px 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="wrap">
         <div class="logo">
             <svg viewBox="0 0 24 24">
                 <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
@@ -230,8 +231,7 @@
             </div>
         </a>
 
-        <div class="badge">v1.0 • Без рекламы • Без логов</div>
-
+        <div class="meta">v1.0 • Без рекламы • Без логов</div>
         <div class="footer">© 2026 spinogrzVPN</div>
     </div>
 </body>
